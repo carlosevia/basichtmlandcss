@@ -1,0 +1,93 @@
+/* Virginia Tech Colors */
+:root {
+  --vt-maroon: #660000;
+  --vt-orange: #FF6600;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--vt-maroon);
+  color: white;
+  padding: 16px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Collapsible Menu Styles */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+  }
+
+  nav.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Main Content Styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h1 {
+  color: var(--vt-maroon);
+}
+
+p {
+  color: #666;
+}
+
+/* JavaScript Styles */
+.active {
+  display: block;
+}
